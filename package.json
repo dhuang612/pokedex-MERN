@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.0.1",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "memory-cache": "^0.2.0",
+    "nodemon": "^1.19.1",
+    "pokedex-promise-v2": "github:PokeAPI/pokedex-promise-v2"
+  },
+  "devDependencies": {
+    "es6-promise": "^4.2.8"
+  }
+}
