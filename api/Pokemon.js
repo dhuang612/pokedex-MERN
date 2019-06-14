@@ -22,8 +22,18 @@ Poke.resource(['api/v2/pokedex/2/'])
     for (let i = 0; i < req.length; i++) {
       if (req[i].pokemon_entries) {
         Pokedata.push(req[i].pokemon_entries);
-        const pokemon = await req.Pokedata.save();
-        res.send(pokemon);
+        console.log(Pokedata);
+        for (let x = 0; x < req[i].pokemon_entries.length; x++) {
+          console.log(req[i].pokemon_entries[x].pokemon_species.url);
+          if (req[i].pokemon_entries[x].pokemon_species) {
+            Poke.resource([`${req[i].pokemon_entries[x].pokemon_species.url}`])
+              .then(
+                Pokedata.push(req[i].pokemon_entries[x].pokemon_species.url)
+              )
+              .catch(error => console.log(error));
+          }
+        }
+
         //console.log(Pokedata);
       }
       return Pokedata;
