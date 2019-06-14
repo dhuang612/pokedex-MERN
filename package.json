@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "server": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,10 +17,11 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "memory-cache": "^0.2.0",
-    "nodemon": "^1.19.1",
+    "mongoose": "^5.5.15",
     "pokedex-promise-v2": "github:PokeAPI/pokedex-promise-v2"
   },
   "devDependencies": {
-    "es6-promise": "^4.2.8"
+    "es6-promise": "^4.2.8",
+    "nodemon": "^1.19.1"
   }
 }

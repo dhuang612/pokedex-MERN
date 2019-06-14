@@ -24,6 +24,22 @@ Poke.resource(['api/v2/pokedex/2/'])
         Pokedata.push(req[i].pokemon_entries);
         console.log(Pokedata);
       }
+      return Pokedata;
     }
   })
+
   .catch(error => console.log(error));
+/*
+.then(
+    Pokedata.forEach(function(pokemon_entries) {
+      const pokeStats = [];
+      pokeStats.push(pokemon_entries.pokemon_species.url);
+      for (let x = 0; x < pokeStats.length; x++) {
+        Poke.resource(['api/v2/pokedex/2/pokeStats[x]']).then(
+          console.log(Poke)
+        );
+      }
+    })
+  )
+
+*/
