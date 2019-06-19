@@ -5,8 +5,8 @@ const keys = require('./config/keys');
 mongoose.connect(keys.mongoURI);
 
 const app = express();
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ type: 'application/*+json' }));
 //pokemon api
 require('./api/Pokemon');
 

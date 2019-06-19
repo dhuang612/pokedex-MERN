@@ -1,5 +1,3 @@
-module.exports = app => {
-  app.post('/pokemon', async (res, req) => {
-    console.log(req.body);
-  });
-};
+const Pokedex = require('pokedex-promise-v2');
+
+module.exports = app => {};
